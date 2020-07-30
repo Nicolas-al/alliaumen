@@ -1,0 +1,33 @@
+easy_admin:
+   entities:
+       # List the entity class name you want to manage
+        Portfolio:
+            class: App\Entity\Portfolio
+            list:
+                fields:
+                    - id
+                    - title
+                    - description
+                    - skills
+                    - { property: 'image', label: 'image', type: 'image', base_path: '%app.path.uploads_images%'}
+                    - link
+            form:
+                fields:
+                    - title
+                    - description
+                    - skills
+                    - { property: 'imageFile',  type: 'vich_image', label: 'image' }  
+                    - link
+        Skills:
+            class: App\Entity\Skills
+            list:
+                fields:
+                    - id
+                    - name
+                    - { property: 'logo', label: 'image', type: 'image', base_path: '%app.path.uploads_logos%'}
+            form:
+                fields:
+                    - name
+                    - { property: 'type', type: 'choice', type_options: { multiple: false, choices: { 'Frontend': 'Frontend', 'Backend': 'Backend' } } }
+                    - { property: 'logoFile',  type: 'vich_image', label: 'image' }  
+

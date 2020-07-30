@@ -1,0 +1,396 @@
+#aside{ 
+background : #353548;
+}
+#header{
+    height: 400px;
+}
+#block_competences{
+    height: 500px;
+}
+#block_portfolio{
+    height: 1400px;
+}
+#block_contact{
+    margin-top: 20px;
+    height: 380px;
+}
+footer{
+    background-color: #35334814;
+}
+.button{
+    background: #14a7ea;
+    border: 1px solid white;
+    padding: 5px 9px;
+    border-radius: 4px;
+}
+
+/* sections block titre */
+
+.block_title{
+    height: 165px;
+    background: #35334814;
+}
+.minus_block{
+    text-align: center;
+    margin-top: 61px;
+}
+.minus_one{
+    color: #11a7ea
+}
+.minus_two{
+    color: #1d75d2;
+}
+.minus_three{
+    color: #353648;
+}
+.title{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.title h4{
+    font-family: 'Philosopher', sans-serif;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.title img{
+    height: 39px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}    
+
+/* aside */
+
+#aside h3{
+    font-family: 'Oswald', sans-serif;
+}
+.block_nav{
+    position: fixed;
+    top: 27%;
+}
+.block_nav ul{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: end;
+}
+.block_nav a{
+    font-family: 'Catamaran', sans-serif;
+    padding-left: 20px
+}
+
+.block_network{
+    position: fixed;
+    top: 84%;
+    margin-left: 1%;
+}
+
+/* header */
+
+.header_p{
+    font-family: 'Merienda', cursive;
+    font-size: 1.3em;
+    color: #212529e8;
+    width: 93%;
+    box-shadow: 0px 0px 7px;
+    text-align: center;
+}
+/* #chevron_bas{
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 2px solid #1D75D2;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+#chevron_bas::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: sdb03 3s infinite;
+    animation: sdb03 3s infinite;
+    box-sizing: border-box;
+}
+#chevron_bas::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 2px solid #1D75D2;
+    border-bottom: 2px solid #1D75D2;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+} */
+/* Mon profil */
+
+#block_profil{
+    margin: auto;
+}
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+
+.from-center{      
+    position: relative; 
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.4rem;
+    color: black;
+    margin: auto;
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  
+    cursor: pointer;
+    user-select: none;
+}
+
+.from-center:before, .from-center:after {
+    content: '';
+    position: absolute; 
+    transition: inherit;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.from-center:hover {
+    color: white;
+    transition-delay: .5s;
+}
+
+.from-center:hover:before {
+    transition-delay: 0s;
+}
+
+.from-center:hover:after {
+    background: #353648;
+    transition-delay: .25s;
+}
+
+
+.from-center:before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+}
+
+.from-center:after {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #353648;
+}
+
+.from-center:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.from-center:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+#profil_panel{
+    display: none;
+}
+
+
+/* ----------------block compétences------------------*/
+#skills{
+    height: 65%;
+}
+.skills_title{
+    align-items: center;
+}
+.skills_title i{
+    margin: inherit;
+}
+.align-title{
+    margin: inherit;
+    margin-left: 5px;
+}
+
+#front{
+    width: 53%;
+    border-bottom: 300px solid whitesmoke;
+}
+#back{
+    width: 59%;
+    border-bottom: 300px solid #353448;
+    border-left: 43px solid #f5f5f5fc;
+}
+
+/* -----------------Block Portfolio--------------------- */
+
+#para_portfolio{
+    height: 100px;
+    margin-top: 50px;
+}
+
+/* -------Slider------- */
+.block_slides{
+    height: 40%;
+}
+#block_portfolio h4{
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+.panel_project{
+    width: 737px;
+    margin: auto;
+    display: none;
+    box-shadow: 0px 0px 27px #353448;
+    border-radius : 5px;
+}
+
+
+.description_project{
+    border-bottom: 5px solid #f39c12c9;
+    background: white;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.description_project h4{
+    font-weight: 700;
+}
+.description_project p{
+    font-size: 1.1em;
+}
+.project img{
+    width: 100%;
+}
+.project_link{
+    border: 2px solid white;
+    margin-left: 334px;
+    position: absolute;
+    z-index: 13;
+    padding: 7px 15px;
+    margin-top: -213px;
+    background: #353348;
+}
+.project_link:hover{
+    background: #100f19;
+}
+.project_link a:hover{
+    text-decoration: none;
+}
+.skills_project{
+    border-top: 5px solid #f39c12c9;
+}
+.skills_project p{
+    padding-right: 2%;
+    padding-left: 2%;
+    padding : 10px;
+}
+.skills_project span{
+    font-weight: bold;
+}
+/*  */
+#block_project_card{
+    margin-top : 12%;
+}
+#projects_cards{
+    text-align: center;
+    justify-content: center;
+}
+.project_card{
+    color: white;
+    margin-left: -10%;
+    border: 1px solid;
+    box-shadow: 0px 0px 3px;
+    border-right: 2px solid;
+    border-radius: 11px;
+    max-width: 19%;
+    background: #353348;
+    cursor: pointer;
+}
+.project{
+    opacity: 0.8;
+}
+.project h4{
+    color: white;
+}
+.project p{
+    color: white; 
+}
+.project_content p{
+    padding: 3% 9% 0% 9%;
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 0.8em;
+}
+.project_content p:last-child{
+    margin-bottom: 3%;
+}
+.project_content h4{
+    padding: 3%;
+}
+.project_content img{
+    width: 99%;
+}
+/*----------- Contact ---------- */
+
+#block_contact address a{
+    font-weight: bold;
+    color: #353648;
+}
+
+.modal_contact{
+    display: none;
+    background: white;
+    width: inherit;
+    z-index: 100;
+    top: 0px;
+    height: 100%;
+    position: absolute;
+    margin-left: -15px;
+}
+
+#errors_form{
+    color: red;
+    font-size: 1em;
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 992px){
+    .block_nav{
+        position: inherit;
+    }
+    .block_nav ul{
+        display: flex;
+        flex-direction: inherit;
+        justify-content: center;
+    }
+    .block_network{
+        position: absolute;
+        top: 10%;
+        left: 2%;
+    }
+    .block_network h6{
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<div col="7" class="container">
+{{ form_start(form) }} 
+
+{{ form_row(form.Name, {'attr': {'placeholder': "Entrer votre Nom"}}) }}
+{{ form_row(form.FirstName, {'attr': {'placeholder' : "Entrer votre Prenom"}}) }}
+{{ form_row(form.Mail, {'attr': {'placeholder' : "Entrer votre Email"}}) }}
+
+{{ form_end(form) }}
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class="modal_contact">
+    <div class="row" id="contact_form">
+        <div class="col-lg-4 offset-lg-4 text-center">
+            <h1>
+            Contact
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto"> 
+    {# {{ form_start(form, {'method': 'POST'}) }} 
+
+    {{ form_row(form.Name, {'attr': {'placeholder': "Entrer votre Nom"}}) }}
+    {{ form_row(form.FirstName, {'attr': {'placeholder' : "Entrer votre Prenom"}}) }}
+    {{ form_row(form.Mail, {'attr': {'placeholder' : "Entrer votre Email"}}) }}
+    {{ form_row(form.Message, {'attr': {'placeholder' : "Ecrivez votre message"}}) }}
+    {{ form_row(form.Submit, {'attr': {'value' : "Envoyer", 'class' : 'submit_contact', }}) }}
+ #}
+                <label>name</label>
+                <input type="text" name="name"/>
+                <label>firstname</label>
+                <input type="text" name="firstname"/>
+                <label>mail</label>
+                <input type="mail" name="mail"/>
+                <label for="message">message</label>
+                <textarea type="text" name="message"></textarea>
+                <button id="button_form">emvoyer</button>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

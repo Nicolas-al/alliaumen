@@ -1,0 +1,19 @@
+$(document).ready(function () {
+    // $('#profil').hover( function(){
+       
+        
+        
+    // });
+
+    var blockDown = $('.block-down>i')
+    var profil = $('#profil');
+    profil.on("click", function(){
+        blockDown.removeClass("double-down")
+        console.log(blockDown.css());
+        $('#profil_panel').fadeIn(2000).delay(1000);
+        $('#block_profil').css({
+        "margin" : "unset"
+        });
+        console.log('weeee');
+    })  
+});

@@ -1,0 +1,29 @@
+   
+    {% block aside %}
+    <div class="col-lg-2 text-white" id="aside" style="border-right: 2px solid #353548">
+        <div class="mt-5">
+            <div class="block_profil">
+                <h3 class="text-center">Nicolas Alliaume</h3>
+                <h4 class="text-center">Dev Junior</h4>
+            </div>
+            <div class="block_nav">
+                <nav class="navbar navbar-expand text-center">
+                    <ul class="nav" style="width: -webkit-fill-available">
+                        <li class="nav-item active"><a href="/#" class="nav-link text-white">Accueil</a></li>
+                        <li class="nav-item"><a href="/#block_competences" class="nav-link text-white">Compétences</a></li>
+                        <li class="nav-item"><a href="/#block_portfolio" class="nav-link text-white">Portfolio</a></li>
+                        <li class="nav-item"><a href="/#block_contact" class="nav-link text-white">Contatct</a></li>
+                    </ul> 
+                </nav>
+            </div>
+        </p>
+            <div class="block_network">
+                <h7>RESEAUX SOCIAUX</h7>
+                <div class="d-flex justify-content-center">
+                    <img class="" src="{{asset('icons/icon-twitter.png') }}" alt="icon de twitter">
+                    <img src="{{asset('icons/icon-linkedin.png') }}" alt="icon de linkedin">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
