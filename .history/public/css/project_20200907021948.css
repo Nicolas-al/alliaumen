@@ -1,0 +1,18 @@
+/* ------------ Project Page -------------- */
+
+#comment_block{
+    margin-bottom: 30px;
+}
+#comments{
+    border : 1px solid;
+}
+#comment{
+    margin-bottom: 3%;
+}
+#author_comment{
+background-color: #353648;
+color :white
+}
+#content_comment{
+background-color: #35364859;
+}

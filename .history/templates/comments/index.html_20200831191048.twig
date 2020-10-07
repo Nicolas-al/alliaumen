@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommentsController!{% endblock %}
+
+{% block body %}
+
+<section class="project_page">
+    <div class="container">
+        <h1>{{ portfolio.title }}</h1>
+        <p> {{ portfolio.description }}</p>
+        <figure>
+        <img src="{{ vich_uploader_asset( portfolio, 'imageFile') | imagine_filter('slider_thumb')}}" alt="image projet">
+        <figcaption>Compétences utilisées : {{ portfolio.skills }}</figcaption>
+        </figure>
+    </div>
+</section>
+<hr>
+<section class="container">
+    <h1> Commentaires </h1>
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+</section>
+
+{% endblock %}

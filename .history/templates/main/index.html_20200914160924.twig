@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="wrapper">
+        <nav id="sidebar">
+        {% include 'main/aside.html.twig' %}
+        </nav>
+        <div class="content">
+            
+            <div class="col-lg-12 mt-5" id="header">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-3 offset-md-1" id="block_photo">
+                            <img src="{{ asset('images/29273464-photo-de-profil-avatar.jpg') }}" alt="image de profil" style="width : inherit">
+                        </div>
+                        <div class="col-lg-8 col-sm-8" id="block_profil">
+                            <div class="text-center d-flex" id="profil">
+                                <div class="block-down">
+                                    <i class="fas fa-angle-double-down double-down"></i>
+                                </div>
+                                <div class="from-center">Mon profil</div>
+                            </div>
+                            <ul class="list-group list-group-flush" id="profil_panel">
+                                <li class="list-group-item">Diplôme : Master Sociologie Rennes 2</li>
+                                <li class="list-group-item list-group-item-secondary">Age : 29</li>
+                                <li class="list-group-item">Formation Web : Openclassroom</li>
+                                <li class="list-group-item list-group-item-secondary">Intitulé : Developpeur Web Junior</li>
+                                <li class="list-group-item">Parcours : Virage à 180, non pas par dégoût bien au contraire, j'ai acquis des connaisances importantes. J'ai découvert ce domaine et voyez la suite de ce site par vous même. </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>   
+            <div id="block_competences">
+                    <div class="block_title">
+                        <div class="title_elmt">
+                            <div class="minus_block">
+                                <i class="fas fa-minus minus_one"></i>
+                                <i class="fas fa-minus minus_two"></i>
+                                <i class="fas fa-minus minus_three"></i>
+                            </div>
+                            <div class="title">
+                                <img src="{{ asset('images/icons/icon-skills.png') }}" alt="icon d'une tête d'humain" class="" />
+                                <h4>Compétences</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="skills">
+                        <div class="h-50" id="front">    
+                            <div class="skills col-lg-12">
+                                <div class="row h-100">
+                                    <div class="col-lg-12 d-flex mt-2 justify-content-center skills-title">
+                                        <i class="fas fa-code"></i>                                    
+                                        <p class="align-title"><strong>Frontend</strong></p>
+                                    </div>
+                                    <div class="col-lg-12 mt-2" id="text_black"> 
+                                        <div class="row text-center">
+                                        {% for skill in skills %}
+                                            {% if skill.type == "Frontend" %}
+                                                <div class="col-lg-4 col-sm-4 logo-skills">
+                                                {% if skill.logo %}
+                                                    <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                                {% endif %}
+                                                    <p> {{ skill.name }} </p>
+                                                </div>
+                                            {% endif %}    
+                                        {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-50" id="back">    
+                            <div class="skills col-lg-12">
+                                <div class="row h-100">
+                                    <div class="col-lg-12 d-flex justify-content-center mt-2 skills-title">
+                                        <i class="fas fa-database text-white"></i>
+                                        <p class="align-title text-white"><strong>Backend</strong></p>
+                                    </div>
+                                    <div class="col-lg-12 mt-2 text-white" id="text_white">
+                                        <div class="row text-center">
+                                            {% for skill in skills %}
+                                                {% if skill.type == "Backend" %}
+                                                    <div class="col-lg-4 col-sm-4 logo-skills" >
+                                                    {% if skill.logo %}
+                                                        <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                                    {% endif %}
+                                                        <p> {{ skill.name }} </p>
+                                                    </div>
+                                                {% endif %}    
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>             
+                    </div>
+            </div>
+            <div class="mt-5" id="block_portfolio">
+                
+                <div class="col-lg-12 block_title mb-3">
+                    <div class="title_elmt">
+                        <div class="minus_block">
+                            <i class="fas fa-minus minus_one"></i>
+                            <i class="fas fa-minus minus_two"></i>
+                            <i class="fas fa-minus minus_three"></i>
+                        </div>
+                        <div class="title">
+                            <img src="{{ asset('images/icons/icon-portfolio.png') }}" alt="lampe qui éclair" class="" />
+                            <h4>Portfolio</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-10 offset-sm-1 col-sm-10" id="para_portfolio">
+                    <p> Ici sont présentés les projets effectués par moi même. Constatez par vous même en vous rendant directement sur un projet. N'hésitez pas à selectionner une carte projet pour afficher son contenu sur le panneau. En bas du panneau sont détaillées les compétences utilisés</p>
+                </div>
+                <div class="d-flex m-auto block_slides">
+
+                    {% for project in portfolio %}
+
+                    <div class="panel_project">
+                        <div class="description_project">
+                            <div class="">
+                                <div class="col-lg-12">
+                                    <h4>{{ project.title }}</h4>
+                                </div>
+                                <div class="col-lg-12">
+                                    <p> {{ project.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            
+                            <img src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('slider_thumb')}}" alt="image projet">
+                            <div class="project_link">
+                                <a href="{{ path('portfolio', {'id' : project.id})  }}" class="text-white"> voir le site </a>
+                            </div>
+                        </div>
+                        <div class="skills_project"> 
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p> <span>Compétences utilisées :</span> {{ project.skills }}</p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+                <div class="col-lg-12" id="block_project_card">
+                    <div class="row" id="projects_cards">
+
+                        {% for project in portfolio %}
+
+                        <div class="project_card">
+                            <div class="project_content">
+                                <h6> {{ project.title }} </h6>
+                                <img src="{{ vich_uploader_asset( project, 'imageFile') | imagine_filter('medium_thumb')}}" alt="">
+                                <p> {{ project.description }} </p>
+                                <p> {{ project.skills }} </p>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>            
+            </div>
+            <div id="block_contact">
+                <div class="col-lg-12 block_title">
+                    <div class="title_elmt">
+                        <div class="minus_block">
+                            <i class="fas fa-minus minus_one"></i>
+                            <i class="fas fa-minus minus_two"></i>
+                            <i class="fas fa-minus minus_three"></i>
+                        </div>
+                        <div class="title">
+                            <img src="{{ asset('images/icons/icon-contact-de-messagerie.png') }}" alt="icon d'une tête d'humain" class="" />
+                            <h4>Contact</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 pl-5">
+                    
+                    <address>
+                        <p class="d-inline"> Email : </p>
+                        <a href="mailto:alliaume.nicolas@gmail.com">alliaume.nicolas@gmail.com</a><br>
+                    </address>
+                </div>
+                <p class="col-lg-12 pl-5">
+                    Laissez moi un message si vous le souhaitez après avoir cliqué sur le bouton ci-dessous.
+                </p>
+                <div class="col-lg-12 pl-5">
+                    <button class="button" id="form_button">
+                        <a href="#contact_form" id="form_link" class="font-weight-bold text-white">
+                        laisser un message</a>
+                    </button>
+                </div>
+            </div>
+            {% include 'contact/index.html.twig' %}     
+            {% include 'main/footer.html.twig' %}     
+            </div>                
+        </div>    
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}

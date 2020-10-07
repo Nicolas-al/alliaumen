@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommentsController!{% endblock %}
+
+{% block body %}
+<section class="project_page">
+    <div class="container">
+        <img src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('slider_thumb')}}" alt="">
+    </div>
+</section>
+{% endblock %}

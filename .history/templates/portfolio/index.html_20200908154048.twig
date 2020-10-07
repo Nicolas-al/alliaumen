@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="wrapper">
+    <nav id="sidebar">
+    {% include 'main/aside.html.twig' %}
+    </nav>
+    <div class="content">
+        <section class="project_page">
+            <div class="container">
+                <h1>{{ portfolio.title }}</h1>
+                <p> {{ portfolio.description }}</p>
+                <figure>
+                <img src="{{ vich_uploader_asset( portfolio, 'imageFile') | imagine_filter('slider_thumb')}}" alt="image projet">
+                <figcaption>Compétences utilisées : {{ portfolio.skills }}</figcaption>
+                </figure>
+            </div>
+        </section>
+        <hr>
+        <section class="container" id="comment_block">
+            <div id="comment_whrite">
+                <h1> Commentaires </h1>
+                <form action="{{ path('portfolio', {'id' : portfolio.id}) }}" method="post">
+                    <div class="form-group">
+                        <label for="author">Nom :</label>
+                        <input class="form-control" type="text" name="author"/>
+                    </div>    
+                    <div class="form-group">    
+                        <label for="comment">Comment :</label>
+                        <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="envoyer">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-12" id="comments"> 
+                {% for comment in comments %}
+                    {% if comment.portfolio == portfolio %}
+                    <div class="row" id="{{ comment.id }}">
+                        <div class="col-lg-12" id="author_comment">
+                            <p>Posté par <strong>{{ comment.author }}</strong> le {{ comment.createdAt | date('d/m/Y') }} à {{ comment.createdAt | date('H:i') }}h </p>
+                        </div>
+                        <div class="col-lg-12" id="content_comment">
+                            <p>{{ comment.content }} </p>
+                        </div>
+                        {% if is_granted('ROLE_MODO') %}
+                        <div class="form-group" id="moderate-buttton">
+                            <div onclick="deleteCom({{ comment.id }})" class="delete-com">
+                                <input type="button" class="btn btn-primary" value="Supprimer">
+                            </div>
+                            <div class="moderate">
+                                <input type="button" class="btn btn-primary" value="Bannir l'IP">
+                            </div>
+                        </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+/* ------------ Project Page -------------- */
+
+h1{
+    text-align: center;
+    margin: 4%;
+}
+
+#comment_block{
+    margin-bottom: 30px;
+}
+#comments{
+    border : 1px solid;
+    margin-bottom: 9%;
+}
+#author_comment{
+background-color: #353648;
+color :white
+}
+#content_comment{
+background-color: #35364859;
+}

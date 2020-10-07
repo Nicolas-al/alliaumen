@@ -1,0 +1,49 @@
+/* ------------ Project Page -------------- */
+
+h1{
+    text-align: center;
+    margin: 4%;
+}
+.project_page p{
+    font-size: 1.1em;
+    margin: 4% 0%;
+    text-align: center;
+}
+.content{
+    width: 100%;
+}
+figure{
+    text-align: center;
+}
+figure img{
+    box-shadow: 2px 2px 13px;
+}
+figure .btn{
+    background: #353648;
+}
+figure a{
+    color: white;
+}
+figcaption{
+    margin-top: 10px;
+}
+#comment_block{
+    margin-bottom: 30px;
+}
+#comments{
+    margin-bottom: 9%;
+    margin-top: 4%;
+}
+#comments .comment{
+    margin-bottom: 30px;
+    border: 1px gainsboro;
+    box-shadow: 1px 1px 5px;
+}
+#author_comment{
+background-color: #353648;
+color :white
+}
+#content_comment{
+background-color: #35364859;
+padding: 9px 10px;
+}
