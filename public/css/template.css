@@ -1,0 +1,128 @@
+
+.pc{
+    height: 300px;
+    opacity: 0.3;
+}
+
+#close_pc{
+    position: absolute;
+    right: 36%;
+    height: 348px;
+    z-index: -1;
+    top: 7%;
+    width: 500px;
+    transform: rotate(-8deg);
+}
+#open_pc{
+    position: absolute;
+    right: 10%;
+    width: 200px;
+    height: 184px;
+}
+
+
+.red-line{
+    position: absolute;
+    top: 30px;
+    height: 100%;
+    z-index: 2px;
+    width: 10px;
+    background: red;
+    box-shadow: -3px 0px 0px white;
+    left: 10%;
+}
+
+#white-line1{
+    position: absolute;
+    top: 30px;
+    height: 100%;
+    width: 1px;
+    background: white;
+    left: 13%;
+}
+#white-line2{
+    position: absolute;
+    top: 30px;
+    height: 100%;
+    width: 1px;
+    background: white;
+    left: 16%;
+}
+#white-line3{
+    position: absolute;
+    top: 84px;
+    height: 1px;
+    width: 80%;
+    background: white;
+    left: 10%;
+}
+#white-line4{
+    display: none;
+}
+
+@media screen and (max-width: 991px){
+    #cv_click{
+        position: fixed;
+        z-index: 11;
+        margin-left: 48%;
+        top: 0.3%;
+    }
+}
+
+@media screen and (max-width: 699px){
+    .red-line{
+        top: 3%;
+        height: 2px;
+        z-index: 7;
+        width: 100%;
+        left: 0;
+        position: fixed;
+    }
+    #white-line1{
+        top: 6%;
+        height: 1px;
+        z-index: 7;
+        width: 47%;
+        left: 0;
+        position: fixed;
+    }
+    #white-line2{
+        top: 6%;
+        height: 1px;
+        z-index: 7;
+        width: 47%;
+        left: 53%;
+        position: fixed;
+    }
+    #white-line3{
+        top: 46px;
+        z-index: 7;
+        height: 1px;
+        width: 46%;
+        left: 0;
+        position: fixed;
+    }
+    #white-line4{
+        display: block;
+        position: absolute;
+        top: 46px;
+        height: 1px;
+        z-index: 6;
+        width: 46%;
+        background: white;
+        left: 54%;
+        position: fixed;
+    } 
+    #cv_click{
+        z-index: 11;
+        position: fixed;
+        margin-left: 47%;
+        top: 0.3%;
+    }
+}
+@media screen and (max-width: 499px){
+
+    #cv_click{
+        margin-left: 47%;
+    }
+}

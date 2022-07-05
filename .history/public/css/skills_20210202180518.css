@@ -1,0 +1,41 @@
+#block_competences{
+    color: white;
+}
+#progress_bar{
+    height: 22px;
+    width: 100%;
+    margin-top: 1.2%;
+}
+#progress_bar2{
+    height: 22px;
+    width: 100%;
+    margin-top: 1.2%;
+}
+.progress-bar{
+    flex-direction: inherit;
+}
+
+#progress_bar_blue{
+    background-color: rgb(69, 104, 202)
+}
+#progress_bar_red{
+    background-color: rgb(226, 19, 19)
+}
+#progress_bar_orange{
+    background-color: rgb(233, 136, 45)
+}
+#progress_bar_grey{
+    background-color: rgb(105, 106, 107)
+}
+#progress_bar_black{
+    background-color: rgb(0, 1, 5)
+}
+#progress_bar_lightBlue{
+    background-color: rgb(45, 201, 248)
+}
+#progress_bar_purple{
+    background-color: rgb(117, 20, 173)
+}
+#progress_bar_yellow{
+    background-color: rgb(252, 249, 85)
+}

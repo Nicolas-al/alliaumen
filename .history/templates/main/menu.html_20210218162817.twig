@@ -1,0 +1,10 @@
+{% block body %}
+<div id="nav_bar"></div>
+<nav class="nav flex-column" id="nav">
+  <a class="nav-link mt-4 menu" href="{{ path('main') }}"><i class="fas fa-home"></i><p>accueil</p></a>
+  <a class="nav-link mt-4 menu" href="{{ path('skills') }}"><i class="fab fa-whmcs"></i><p>compétences</p></a>
+  <a class="nav-link mt-4 menu" href="{{ path('projects') }}"><i class="fas fa-project-diagram"></i><p>projets</p></a>
+  <a class="nav-link mt-4 menu"><i class="fas fa-address-card"></i><p>contact</p></a>
+</nav>
+
+{% endblock %}

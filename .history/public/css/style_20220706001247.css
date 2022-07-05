@@ -1,0 +1,628 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#body{
+    background: #15141d;
+
+}
+
+#footer{
+    position: absolute;
+    margin-top: 54%;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    color: white;
+}
+
+
+#block_competences{
+    height: 630px;
+    width: 108%;
+    margin-left: 0;
+    margin-right: 0;
+}
+#block_portfolio{
+    padding-top: 5%;
+}
+#block_contact{
+    margin-top: 20px;
+    height: 380px;
+}
+footer{
+    background: #353648;
+}
+.button{
+    background: #14a7ea;
+    border: 1px solid white;
+    padding: 9px 46px;
+    border-radius: 4px;
+}
+.button a{
+    font-size: 1.2em;
+}
+.button a:hover{
+    text-decoration: none;
+}
+
+/* sections block titre */
+   
+
+/*------------------------------------- Nav Aside -------------------------------------*/
+
+
+
+/*----------------------------------- HEADER -----------------------------------*/
+
+
+#block_presentation{
+    max-width: 35%;
+    margin: auto;
+    padding-bottom: 40px;
+    z-index: 4;
+}
+
+#presentation ul{
+    list-style-type: none;
+    color: white;
+}
+
+.background-presentation{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Mon profil */
+
+#block_profil{
+    height: fit-content;
+    margin-left: 16%;
+    z-index: 4;
+    margin-top: 9%;
+}
+
+#profil{
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-family: 'Yusei Magic', sans-serif;
+}
+#presentation{
+    height: 300px;
+    margin-top: 9%;
+}
+#block_presentation{
+    width: 100%;
+}
+
+#first_row{
+    position: absolute;
+    top: 26%;
+    height: fit-content;
+    color: white;
+    animation: revealLTR 1.8s ease;
+}
+
+
+#first_presentation p{
+    animation: display 2.5s ease;
+    opacity: 1;
+    margin-top: -37px;
+}
+
+
+
+#first_presentation span{
+    color: #ff0100;
+    text-shadow: -5px 1px white;
+    font-size: 8em;
+}
+
+
+
+
+#ello_world{
+    font-size: 2em;
+}
+
+#block_profil p{
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
+    margin-bottom: 4%;
+    color: white;
+    
+}
+
+#text_profil{
+    margin-left: 6%;
+    margin-top: -3%;}
+
+#text_profil p:first-child{
+    font-size: 1.3em;
+    margin: auto;
+    text-align: start;
+}
+#text_profil p:last-child{
+    text-align: start;
+}
+
+/*    ANIMATION     */
+#block_text{
+    width: 100%;
+    height: 108%;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    background: white;
+}
+
+.typewriter{
+    width: fit-content;
+    margin: auto;
+    padding-top: 10%;
+}
+
+.typewriter .text p{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #ff0102;/* The typwriter cursor */ 
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    color: black;
+  }
+  .text{
+    margin-bottom: 7%;
+  }
+  
+  .text1{
+    width: fit-content;
+    }
+  .text1 p{
+    animation: 
+      typing 0.5s steps(40, end) forwards,
+      blink-caret .75s step-end 1 forwards;
+  }
+  .text2{
+      width: fit-content;
+      margin-left: 9%;
+  }
+  
+  .text2 p{
+    opacity: 0;
+    animation: 
+      typing 0.5s steps(40, end) forwards,
+      blink-caret .75s step-end 1 forwards;
+    animation-delay: 0.5s;
+    
+  }
+  .text3{
+    width: fit-content;
+    margin-left: 20%;
+  }
+
+  .text3 p{
+  opacity: 0;
+  animation: 
+    typing 1s steps(40, end) forwards,
+    blink-caret .75s step-end 1.45 forwards;
+  animation-delay: 1s;
+  
+  }
+  .text4{
+    width: fit-content;
+    margin-left: 32%;
+  }
+
+  .text4 p{
+  opacity: 0;
+  animation: 
+    typing 1s steps(40, end) forwards,
+    blink-caret .75s step-end 1.25 forwards;
+  animation-delay: 2s;
+  
+  }
+
+  .text5{
+    width: fit-content;
+    margin-left: 20%;
+  }
+
+  .text5 p{
+  opacity: 0;
+  animation: 
+    typing 0.5s steps(40, end) forwards,
+    blink-caret .75s step-end 2 forwards;
+  animation-delay:3s;
+  
+  }
+  .text6{
+      width: fit-content;
+      margin-left: 20%;
+  }
+  .text6 p{
+    opacity: 0;
+    animation: 
+      typing 1s steps(40, end) forwards,
+      blink-caret .75s step-end 2 forwards;
+    animation-delay: 3.5s;
+    
+  }
+  .text7{
+      width: fit-content;
+      margin-left: 20%;
+  }
+  .text7 p{
+    opacity: 0;
+    animation: 
+      typing 1s steps(40, end) forwards,
+      blink-caret .75s step-end 2 forwards;
+    animation-delay: 4.5s;
+    
+  }
+  .text8{
+      width: fit-content;
+      margin-left: 9%;
+  }
+  .text8 p{
+    opacity: 0;
+    animation: 
+      typing 0.5s steps(40, end) forwards,
+      blink-caret .75s step-end 1 forwards;
+    animation-delay: 5.5s;
+    animation-fill-mode: forwards;
+
+  }
+  .text9{
+      width: fit-content;
+  }
+  .text9 p{
+    opacity: 0;
+    animation: 
+      typing 0.5s steps(40, end) forwards,
+      blink-caret .75s step-end 1 forwards;
+    animation-delay: 6s;
+  }
+
+  /* The typing effect */
+    @keyframes typing {
+        from { width: 0;
+        opacity: 0; 
+    }
+        to { width: 100%;
+        opacity: 1; }
+    }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from{ border-right: .15em solid #ff0102;}
+    20% { border-color: transparent; }
+    50% { border-color: #ff0102; }
+    to{
+        border-right: none;
+    }
+  }
+
+
+/*  */
+
+#cv_click{
+    color: #ff0100;
+    text-shadow: -5px 1px white;
+    cursor: pointer;
+    margin-top: 13px;
+}
+#container_cv{
+    display: none;
+    height: 300px;
+    background: white;
+    position: absolute;
+    margin-right: -10%;
+    box-shadow: 0px 0px 7px white;
+    border: 1px solid #ff0102;
+    margin-left: 50%;
+    z-index: 12;
+    right: 50%;
+    width: 215px;
+}
+.fa-times-circle{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    right: 0%;
+    background: #021b31;
+    color: white;
+}
+#container_cv img{
+    height: 261px;
+    width: 100%;
+    margin-top: 4%;
+}
+.container button{
+    border-radius: 4px;
+    color: white;
+    background: #021b31;
+    margin-top: 1%;
+    font-size: 0.8em;
+}
+
+
+
+
+#para_portfolio{
+    height: 100px;
+    padding: 0px 20px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* -------Slider------- */
+
+
+/*------------------------------------------- BLOCK CONTACT ---------------------------------------- */
+
+#block_contact address a{
+    font-weight: bold;
+    color: #353648;
+}
+#second_row{
+    margin: auto;
+    position: relative;
+    margin-top: 38%;
+}
+#form_button{ 
+    margin: auto;
+    font-size: 1.2em;
+    border: none;
+    color: #7fffd3;
+    border-radius: 4px;
+    border: 1px solid #7fffd3;
+    padding: 5px 24px;
+    box-shadow: 0px 0px 6px white;
+    background: #16151e;
+}
+
+
+
+#errors_form{
+    color: red;
+    font-size: 1em;
+    display: none;
+}
+
+/*-------------------------- MENTIONS LEGALES ------------------------*/
+
+#mentions_body a{
+    color: #0087d1;
+}
+
+/*---------------------------- FOOTER ---------------------------------*/
+
+
+
+/*================================================ RESPONSIVE ======================================================== */
+/*================================================            ======================================================== */
+
+@media screen and (min-width: 1199px){
+    #first_row{
+        left: 41%;
+    }
+ 
+}
+
+
+
+@media screen and (max-width: 991px){
+
+    #footer{
+        width: 100%;
+        margin-left: 7%;
+    }
+
+    .wrapper{
+        display: block;
+        margin-top: 140px;
+    }
+    #sidebar{
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 10px
+    }
+    .sidebar-header{
+        margin-top: 0px;
+    }
+    
+    .block_nav{
+        position: inherit;
+        display: contents
+    }
+    .block_nav ul{
+        display: flex;
+        flex-direction: inherit;
+        justify-content: center;
+    }
+    #block_home{
+        height: 500px;
+    }
+    #presentation {
+        height: 500px;
+    }
+    #block_text{
+        height: 1240px;
+    }
+    .typewriter{
+        padding-top: 19%;
+    }
+    #second_row{
+        margin-bottom: 0px;
+        }
+    #mentions_body{
+    margin-left: 2%;
+    }
+    #block_portfolio {
+        padding-top: 200px;
+    }
+
+    #skills{
+        height: fit-content;
+        flex-direction: column;
+        display: flex !important;
+    }
+    .skills{
+        margin-bottom: 0;
+    }
+   
+    #text_black{
+        padding: 20px 30px
+    }
+  
+    #text_white{
+        padding: 20px 30px
+    }
+    .logo-skills{
+        width: 20% !important;
+    }
+    #block_portfolio{
+        height: auto;
+        width: 70%;
+        margin-left: 24%;
+    }
+   
+    #para_portfolio{
+        margin-top: 5%;
+        margin-bottom: 12%;
+    }
+    #block_project_card {
+        margin-top: 20%;
+    }
+    .project_card {
+        max-width: 31%;
+        height: auto;
+    }
+    .card_link{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    #second_row{
+        margin-top: 60%;
+    }
+    .typewriter {
+        padding-top: 30%;
+    }
+
+}
+
+@media screen and (max-width: 699px){
+    #footer{
+        margin-left: 0px;
+        height: 100%;
+        padding-top: 89%;
+    }
+    #presentation{
+        margin-top: 30%;
+    }
+    #first_row{
+        width: initial;
+        left: 25%;
+        margin-top: 27px;
+    }
+    #second_row{
+        margin-bottom: 88%;
+    }
+    #container_cv{
+        z-index: 8;
+        right: 28%;
+        top: 11%;
+    }
+   
+    #block_portfolio{
+        margin: auto;    
+    }
+    .projects_cards{
+        margin-left: 5%;
+    }
+    .project_content p {
+        font-size: 0.7em;
+    }
+   
+   
+}
+    @media screen and (max-width: 500px){
+
+     #second_row{
+        margin-bottom: 50%;
+     }
+    .project_card {
+        max-width: 35%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 10px;
+        border: 1px solid #353447;
+        }
+    .block_slides{
+        margin: 0% 0% 0% 2% !important;   
+    }
+   
+   
+    #projects_cards{
+        margin-top: 22%;
+        align-items: center;
+    }
+    .project_content img{
+        width: 100%;
+        margin: auto;
+        height: 68px;
+        border-radius: 7% 7% 0 0;
+    }
+    .para_cards p:first-child{
+        display: none;
+    }
+    .card_link{
+        display: block;
+        background: #1e74d2;
+        height: 26px;
+        border: 1px solid #1f74d1;
+    }
+    .block_network{
+        top: 0%;
+        left: 2%;
+    }
+    .block_network div{
+        flex-direction: column;
+    }
+    .block_network img{
+        height: 36px;
+        width: 36px;
+    }
+    h6{
+        display: none;
+    }
+    #contact_block{
+        width: 80%;
+    }
+ 
+}
+@media screen and (max-width: 414px){
+   
+    #presentation{
+        margin-top: 48%;
+    }
+    #first_row{
+        left: 12%;
+    }
+    
+}
+@media screen and (max-width: 320px){
+}

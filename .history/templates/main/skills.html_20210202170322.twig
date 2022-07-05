@@ -1,0 +1,118 @@
+    {% include 'main/menu.html.twig' %}
+    {% include 'main/template.html.twig' %}
+    {% block body %}
+     <div id="block_competences">
+        <div class="row">
+            <div class="col">
+                <h1>Compétences</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-3" id="front">
+                <h3>Frontend</h3>
+                {% for skill in skills %}
+                    {% if skill.type == "Frontend" %}
+                    <div class="skill d-flex">
+                        {% if skill.logo %}
+                        <div class="img-logo">
+                            <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                        </div>
+                        {% endif %}
+                        <div class="progress" id="progress_bar">
+                            <div class="progress-bar" id="progress_bar_{{ skill.color }}" aria-valuenow="{{ skill.percent }}" aria-valuemax="100" style="width : {{ skill.percent }}%;"></div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>    
+        <div class="row">  
+            <div class="col-lg-9 offset-lg-3" id="back">
+                <h3>Backend</h3>
+                {% for skill in skills %}
+                    {% if skill.type == "Backend" %}
+                    <div class="skill d-flex">
+                        {% if skill.logo %}
+                        <div class="img-logo">
+                            <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                        </div>
+                        {% endif %}
+                        <div class="progress" id="progress_bar">
+                            <div class="progress-bar" id="progress_bar_{{ skill.color }}" aria-valuenow="{{ skill.percent }}" aria-valuemax="100" style="width : {{ skill.percent }}%;">
+                            <p>{{ skill.percent }}%</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div> 
+        
+    </div>
+
+{# 
+                        <div class="block_title">
+                            <div class="title_elmt">
+                                <div class="minus_block">
+                                    <i class="fas fa-minus minus_one"></i>
+                                    <i class="fas fa-minus minus_two"></i>
+                                    <i class="fas fa-minus minus_three"></i>
+                                </div>
+                                <div class="title">
+                                    <img src="{{ asset('images/icons/icon-skills.png') }}" alt="icon d'une tête d'humain" class="" />
+                                    <h4>Compétences</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="skills">
+                            <div class="h-50" id="front">    
+                                <div class="skills col-lg-12">
+                                    <div class="row h-100">
+                                        <div class="col-lg-12 d-flex mt-2 justify-content-center skills-title">
+                                            <i class="fas fa-code"></i>                                    
+                                            <p class="align-title"><strong>Frontend</strong></p>
+                                        </div>
+                                        <div class="col-lg-12 mt-2" id="text_black"> 
+                                            <div class="row text-center">
+                                            {% for skill in skills %}
+                                                {% if skill.type == "Frontend" %}
+                                                    <div class="col-lg-4 col-sm-4 logo-skills">
+                                                    {% if skill.logo %}
+                                                        <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                                    {% endif %}
+                                                        <p> {{ skill.name }} </p>
+                                                    </div>
+                                                {% endif %}    
+                                            {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-50" id="back">    
+                                <div class="skills col-lg-12">
+                                    <div class="row h-100">
+                                        <div class="col-lg-12 d-flex justify-content-center mt-2 skills-title">
+                                            <i class="fas fa-database text-white"></i>
+                                            <p class="align-title text-white"><strong>Backend</strong></p>
+                                        </div>
+                                        <div class="col-lg-12 mt-2 text-white" id="text_white">
+                                            <div class="row text-center">
+                                                {% for skill in skills %}
+                                                    {% if skill.type == "Backend" %}
+                                                        <div class="col-lg-4 col-sm-4 logo-skills" >
+                                                        {% if skill.logo %}
+                                                            <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                                        {% endif %}
+                                                            <p> {{ skill.name }} </p>
+                                                        </div>
+                                                    {% endif %}    
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>             
+                        </div> #}
+            {% endblock %}

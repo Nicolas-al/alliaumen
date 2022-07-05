@@ -1,0 +1,107 @@
+/* ------------ Project Page -------------- */
+
+h1{
+    text-align: center;
+    margin: 4%;
+}
+.project_page p{
+    font-size: 1.1em;
+    margin: 4% 0%;
+    text-align: center;
+}
+.content{
+    width: 100%;
+}
+figure{
+    text-align: center;
+}
+figure img{
+    box-shadow: 2px 2px 13px;
+    width: 100%;
+}
+figure .btn{
+    background: #353648;
+    margin-top: 20px;
+}
+figure a{
+    color: white;
+}
+figcaption{
+    margin-top: 10px;
+}
+#comment_block{
+    margin-bottom: 30px;
+}
+#comments{
+    margin-bottom: 9%;
+    margin-top: 4%;
+}
+#comments .comment{
+    margin-bottom: 30px;
+    border: 1px gainsboro;
+    box-shadow: 1px 1px 5px;
+}
+#author_comment{
+background-color: #353648;
+color :white
+}
+#content_comment{
+background-color: #ffffff;
+padding: 9px 10px;
+}
+
+.opacity_cards{
+    z-index: 2;
+    opacity: 0.4;
+    width: 31.2%;
+    height: 100%;
+    position: absolute;
+    margin-left: 0%;
+    background: #16151e;
+}
+
+@media screen and (max-width: 991px){
+
+    #projects_cards{
+        margin-left: 0px;
+    }
+    .panel_project p{
+        top: 36%;
+        width: 62%;
+        left: 21%;
+    }
+    .opacity-description{
+        height: 121px;
+        top: 29%;
+        left: 16%;
+        width: 70%;
+    }
+   
+}
+@media screen and (max-width: 699px){
+    #row_project_card{
+        margin-top: 10%;
+    }
+    .panel_project p {
+        top: 21%;
+    }
+    .opacity-description{
+        top: 17%;
+    }
+    .project_card {
+        max-width: 35%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 499px){
+
+    .panel_project p{
+        display: none;
+    }
+    .opacity-description{
+        display: none;
+    }
+    .block_project_card{
+        margin-top: 33px;
+    }
+}

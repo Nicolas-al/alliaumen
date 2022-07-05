@@ -1,0 +1,19 @@
+
+.progress{
+    height: 35px;
+}
+#progress_bar{
+    height: 22px;
+    width: 100%;
+    margin-top: 1.2%;
+}
+
+#progress_bar_blue{
+    background-color: rgb(69, 104, 202)
+}
+#progress_bar_red{
+    background-color: rgb(69, 104, 202)
+}
+#progress_bar_orange{
+    background-color: rgb(69, 104, 202)
+}

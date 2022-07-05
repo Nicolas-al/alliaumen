@@ -1,0 +1,83 @@
+$(document).ready(function () {
+
+    let projectCard = $('.project_card');
+    let project = $('.project');
+    let infosProject = $('.panel_project');
+    let opacityCards = $('.opacity_cards');
+    console.log(projectCard);
+    console.log(project);
+    var x = window.matchMedia("(max-width: 500px)")
+
+    if (!x.matches) { // If media query matches
+        console.log('cool');
+        for (let i=0 ; i < projectCard.length; i++)
+        {
+            $(projectCard[0]).css({
+                "marginTop" : "-100px",
+                "marginBottom" : "100px",
+                "background" : "white",
+                "z-index" : 5,
+                "cursor" : "default"
+            }); 
+            for (let j=0; j < opacityCards.length; j++){
+                $(opacityCards[0]).css({
+                    "opacity" : 0,
+                });         
+            for (let a=0 ; a < projectCard.length; a++)
+            {
+                $(projectCard[a]).click(function (){
+                    if ($(projectCard[i]).css('marginTop') === '-100px'){
+                        $(projectCard[i]).css({
+                            "marginTop" : "0px",
+                            "marginBottom" : "0px",
+                            "background" : "white",
+                            "z-index" : 1,
+                            "cursor" : "pointer"
+                        })
+                        $(opacityCards[j]).css({
+                            "opacity" : 0.4,
+                        });                  
+                    }
+                    $(opacityCards[a]).css({
+                        "opacity" : 0,
+                    });              
+                    $(projectCard[a]).css({
+                        "marginTop" : "-100px",
+                        "marginBottom" : "100px",
+                        "background" : "white;",
+                        "z-index" : 5,
+                        "cursor" : "default"
+                    })
+                    $(infosProject[i]).hide();
+                    $(infosProject[a]).show();
+                });         
+                if ($(projectCard[i]).css('marginTop') === '-100px')
+                {
+                    $(infosProject[i]).show();
+                }
+            
+            }
+        }
+        }
+      } 
+      setInterval(() => { slider()   
+      }, 2000);
+      function slider(){
+        let slides = $('.panel_project');
+
+        let i=0;
+        $(slides[i]).css({
+            'display' : 'none'
+        })
+        i++;
+        $(slides[i]).css({
+            'display' : 'block'
+        })
+        console.log(slides[i]);
+
+
+
+      }
+
+    
+});
